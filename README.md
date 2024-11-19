@@ -51,58 +51,58 @@ All devices with firmware major version 4, product name "webOSTV 2.0"
 
 ## Available Commands
 	lgtv scan
-	lgtv --ssl auth <host> MyTV
-	lgtv setDefault MyTV
-	lgtv --name MyTV --ssl audioStatus
-	lgtv --name MyTV --ssl audioVolume
-	lgtv --name MyTV --ssl closeAlert <alertId>
-	lgtv --name MyTV --ssl closeApp <appid>
-	lgtv --name MyTV --ssl createAlert <message> <button>
-	lgtv --name MyTV --ssl execute <command>
-	lgtv --name MyTV --ssl getCursorSocket
-	lgtv --name MyTV --ssl getForegroundAppInfo
-	lgtv --name MyTV --ssl getPictureSettings
-	lgtv --name MyTV --ssl getPowerState
-	lgtv --name MyTV --ssl getSoundOutput
-	lgtv --name MyTV --ssl getSystemInfo
-	lgtv --name MyTV --ssl getTVChannel
-	lgtv --name MyTV --ssl input3DOff
-	lgtv --name MyTV --ssl input3DOn
-	lgtv --name MyTV --ssl inputChannelDown
-	lgtv --name MyTV --ssl inputChannelUp
-	lgtv --name MyTV --ssl inputMediaFastForward
-	lgtv --name MyTV --ssl inputMediaPause
-	lgtv --name MyTV --ssl inputMediaPlay
-	lgtv --name MyTV --ssl inputMediaRewind
-	lgtv --name MyTV --ssl inputMediaStop
-	lgtv --name MyTV --ssl listApps
-	lgtv --name MyTV --ssl listLaunchPoints
-	lgtv --name MyTV --ssl listChannels
-	lgtv --name MyTV --ssl listInputs
-	lgtv --name MyTV --ssl listServices
-	lgtv --name MyTV --ssl mute <true|false>
-	lgtv --name MyTV --ssl notification <message>
-	lgtv --name MyTV --ssl notificationWithIcon <message> <url>
-	lgtv --name MyTV --ssl off
-	lgtv --name MyTV --ssl on
-	lgtv --name MyTV --ssl openAppWithPayload <payload>
-	lgtv --name MyTV --ssl openBrowserAt <url>
-	lgtv --name MyTV --ssl openYoutubeId <videoid>
-	lgtv --name MyTV --ssl openYoutubeURL <url>
-	lgtv --name MyTV --ssl openYoutubeLegacyId <videoid>
-	lgtv --name MyTV --ssl openYoutubeLegacyURL <url>
-	lgtv --name MyTV --ssl sendButton <button>
-	lgtv --name MyTV --ssl serialise
-	lgtv --name MyTV --ssl setInput <input_id>
-	lgtv --name MyTV --ssl setSoundOutput <tv_speaker|external_optical|external_arc|external_speaker|lineout|headphone|tv_external_speaker|tv_speaker_headphone|bt_soundbar>
-	lgtv --name MyTV --ssl screenOff
-	lgtv --name MyTV --ssl screenOn
-	lgtv --name MyTV --ssl setTVChannel <channelId>
-	lgtv --name MyTV --ssl setVolume <level>
-	lgtv --name MyTV --ssl startApp <appid>
-	lgtv --name MyTV --ssl swInfo
-	lgtv --name MyTV --ssl volumeDown
-	lgtv --name MyTV --ssl volumeUp
+	lgtv  auth <host> tv
+	lgtv setDefault tv
+	lgtv --name tv  audioStatus
+	lgtv --name tv  audioVolume
+	lgtv --name tv  closeAlert <alertId>
+	lgtv --name tv  closeApp <appid>
+	lgtv --name tv  createAlert <message> <button>
+	lgtv --name tv  execute <command>
+	lgtv --name tv  getCursorSocket
+	lgtv --name tv  getForegroundAppInfo
+	lgtv --name tv  getPictureSettings
+	lgtv --name tv  getPowerState
+	lgtv --name tv  getSoundOutput
+	lgtv --name tv  getSystemInfo
+	lgtv --name tv  getTVChannel
+	lgtv --name tv  input3DOff
+	lgtv --name tv  input3DOn
+	lgtv --name tv  inputChannelDown
+	lgtv --name tv  inputChannelUp
+	lgtv --name tv  inputMediaFastForward
+	lgtv --name tv  inputMediaPause
+	lgtv --name tv  inputMediaPlay
+	lgtv --name tv  inputMediaRewind
+	lgtv --name tv  inputMediaStop
+	lgtv --name tv  listApps
+	lgtv --name tv  listLaunchPoints
+	lgtv --name tv  listChannels
+	lgtv --name tv  listInputs
+	lgtv --name tv  listServices
+	lgtv --name tv  mute <true|false>
+	lgtv --name tv  notification <message>
+	lgtv --name tv  notificationWithIcon <message> <url>
+	lgtv --name tv  off
+	lgtv --name tv  on
+	lgtv --name tv  openAppWithPayload <payload>
+	lgtv --name tv  openBrowserAt <url>
+	lgtv --name tv  openYoutubeId <videoid>
+	lgtv --name tv  openYoutubeURL <url>
+	lgtv --name tv  openYoutubeLegacyId <videoid>
+	lgtv --name tv  openYoutubeLegacyURL <url>
+	lgtv --name tv  sendButton <button>
+	lgtv --name tv  serialise
+	lgtv --name tv  setInput <input_id>
+	lgtv --name tv  setSoundOutput <tv_speaker|external_optical|external_arc|external_speaker|lineout|headphone|tv_external_speaker|tv_speaker_headphone|bt_soundbar>
+	lgtv --name tv  screenOff
+	lgtv --name tv  screenOn
+	lgtv --name tv  setTVChannel <channelId>
+	lgtv --name tv  setVolume <level>
+	lgtv --name tv  startApp <appid>
+	lgtv --name tv  swInfo
+	lgtv --name tv  volumeDown
+	lgtv --name tv  volumeUp
 
 ## Install
 
@@ -138,23 +138,23 @@ or with [pipx](https://pipx.pypa.io/stable/):
         ],
         "result": "ok"
     }
-    $ lgtv --ssl auth 192.168.1.31 MyTV
+    $ lgtv  auth 192.168.1.31 tv
     # At this point the TV will request pairing, follow the instructions on screen
 
     # Commands are basically
-    $ lgtv --name TVNAME --ssl COMMAND COMMAND_ARGS
+    $ lgtv --name TVNAME  COMMAND COMMAND_ARGS
 
-    $ lgtv --name MyTV --ssl on
-    $ lgtv --name MyTV --ssl off
+    $ lgtv --name tv  on
+    $ lgtv --name tv  off
 
     # If you have the youtube plugin
-    $ lgtv --name MyTV --ssl openYoutubeURL https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    $ lgtv --name tv  openYoutubeURL https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
     # Otherwise, this works reasonably well
-    $ lgtv --name MyTV --ssl openBrowserAt https://www.youtube.com/tv#/watch?v=dQw4w9WgXcQ
+    $ lgtv --name tv  openBrowserAt https://www.youtube.com/tv#/watch?v=dQw4w9WgXcQ
 
     # You can set the default TV so the `--name` argument can be skipped
-    $ lgtv setDefault MyTV
+    $ lgtv setDefault tv
 
 ## SSL
 
@@ -162,9 +162,9 @@ Starting 25th of January 2023 LG has deprecated insecure ws connections, ssl is 
 
 ### Example
 ```
-$ lgtv auth 192.168.1.31 MyTV
-$ lgtv --name MyTV --ssl off
-$ lgtv --name MyTV --ssl screenOff
+$ lgtv auth 192.168.1.31 tv
+$ lgtv --name tv  off
+$ lgtv --name tv  screenOff
 ```
 
 sendButton args:
